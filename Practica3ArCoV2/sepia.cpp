@@ -3,16 +3,18 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-Sepia::Sepia(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::Sepia){
+Sepia::Sepia(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Sepia){
     ui->setupUi(this);
 }
 
-MainWindow::~MainWindow(){
+Sepia::~Sepia(){
     delete ui;
 }
 
+
+/*
 AlgoritmoFoto::AlgoritmoFoto(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AlgoritmoFoto)
@@ -23,4 +25,6 @@ AlgoritmoFoto::AlgoritmoFoto(QWidget *parent) :
 AlgoritmoFoto::~AlgoritmoFoto()
 {
     delete ui;
+
 }
+*/
