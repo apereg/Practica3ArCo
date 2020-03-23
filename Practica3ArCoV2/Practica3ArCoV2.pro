@@ -17,10 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    quicksort.cpp \
+    sepia.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    quicksort.h \
+    sepia.h
 
 FORMS += \
     mainwindow.ui
