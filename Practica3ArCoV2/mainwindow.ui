@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>775</width>
-    <height>348</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@ background-color: rgb(157, 152, 141);</string>
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>180</y>
+      <y>210</y>
       <width>241</width>
       <height>61</height>
      </rect>
@@ -32,14 +32,14 @@ background-color: rgb(157, 152, 141);</string>
 background-color: rgb(74, 74, 74);</string>
     </property>
     <property name="text">
-     <string>Cambio de imagenes a Sepia</string>
+     <string>Cambio de imágenes a Sepia</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Algoritmo1_2">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>180</y>
+      <y>210</y>
       <width>241</width>
       <height>61</height>
      </rect>
@@ -56,7 +56,7 @@ background-color: rgb(74, 74, 74);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>20</y>
+      <y>40</y>
       <width>721</width>
       <height>61</height>
      </rect>
@@ -66,14 +66,14 @@ background-color: rgb(74, 74, 74);</string>
 border-bottom-color: rgb(113, 113, 113);</string>
     </property>
     <property name="text">
-     <string>Bienvenido al calculo de BenchMarks</string>
+     <string>Bienvenido al cálculo de BenchMarks</string>
     </property>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>80</y>
+      <y>110</y>
       <width>681</width>
       <height>20</height>
      </rect>
@@ -89,7 +89,7 @@ border-bottom-color: rgb(113, 113, 113);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>120</y>
+      <y>150</y>
       <width>531</width>
       <height>31</height>
      </rect>
@@ -99,6 +99,32 @@ border-bottom-color: rgb(113, 113, 113);</string>
     </property>
     <property name="text">
      <string>· Seleccione uno de los siguientes algoritmos a ejecutar:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>320</y>
+      <width>831</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(118, 11, 11);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>0</y>
+      <width>841</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(118, 11, 11);</string>
     </property>
    </widget>
   </widget>

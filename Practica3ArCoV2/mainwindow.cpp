@@ -3,9 +3,9 @@
 #include "quicksort.h"
 #include "sepia.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow){
+MainWindow::MainWindow(QWidget *parent):
+    QMainWindow(parent),
+    ui(new Ui::MainWindow){
     ui->setupUi(this);
 }
 
@@ -24,7 +24,7 @@ void MainWindow::on_Algoritmo1_clicked()
 
 void MainWindow::on_Algoritmo2_clicked()
 {
-    Sepia *foto = new Sepia();
+    sepia *foto = new sepia();
     foto->show();
 }
 
