@@ -27,7 +27,9 @@ HEADERS += \
     sepia.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    quicksort.ui \
+    sepia.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
