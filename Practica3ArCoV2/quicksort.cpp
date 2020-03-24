@@ -6,8 +6,8 @@ quicksort::quicksort(QWidget *parent) :
     ui(new Ui::quicksort)
 {
     ui->setupUi(this);
-
-     this->setFixedSize(QSize(537,597));
+    this->vecesEjecutado = 0;
+    this->setFixedSize(QSize(537,597));
 }
 
 quicksort::~quicksort()
@@ -15,15 +15,6 @@ quicksort::~quicksort()
     delete ui;
 }
 
-
-void quicksort::ordenarNumeros(string pathEntrada, string pathSalida)
-{
-
-    this->leeNums(pathEntrada);
-    this->quickSort(0, (int) this->lista.size() -1);
-    this->escribeNums(pathSalida);
-
-}
 
 
 void quicksort::leeNums(string path)
@@ -76,5 +67,92 @@ void quicksort::escribeNums(string path)
         ficheroSalida << this->lista[i];
         ficheroSalida << " ";
     }
+}
+
+
+void quicksort::on_seleccionarArchivoPushButton_clicked()
+{
+
+    this->pathEntrada = QFileDialog::getOpenFileName(this,
+    tr("Open File"), "/home", tr("Text Files (*.txt)"));
+
+}
+
+void quicksort::on_seleccionarArchivoPushButton_2_clicked()
+{
+
+    this->pathSalida = QFileDialog::getOpenFileName(this,
+    tr("Open File"), "/home", tr("Text Files (*.txt)"));
+
+}
+
+void quicksort::on_pushButton_clicked()
+{
+    QErrorMessage error;
+    unsigned t0,t1;
+    double time, media;
+
+    if(this->vecesEjecutado == 5){
+        error.showMessage("El algoritmo ya se ha ejecutado el numero maximo de veces.");
+        error.exec();
+    }else if(this->pathEntrada.trimmed().isEmpty()){
+        error.showMessage("Por favor, especifique el archivo de entrada.");
+        error.exec();
+    }else if(this->pathSalida.trimmed().isEmpty()){
+        error.showMessage("Por favor, especifique el archivo de salida.");
+        error.exec();
+    }else{
+
+        this->leeNums(this->pathEntrada.toStdString());
+
+        t0 = clock();
+
+        quickSort(0, (int) lista.size()-1);
+
+        t1 = clock();
+
+        time = (double(t1-t0)/(CLOCKS_PER_SEC/1000000));
+
+        switch(this->vecesEjecutado){
+            case 0:
+                this->tiempos.push_back(time);
+                ui->tiempo1->setText(QString::number(time) + " microsegundos.");
+                break;
+            case 1:
+                this->tiempos.push_back(time);
+                ui->tiempo2->setText(QString::number(time)+ " microsegundos.");
+                break;
+            case 2:
+                this->tiempos.push_back(time);
+                ui->tiempo3->setText(QString::number(time)+ " microsegundos.");
+                break;
+            case 3:
+                this->tiempos.push_back(time);
+                ui->tiempo4->setText(QString::number(time)+ " microsegundos.");
+                break;
+            case 4:
+                this->tiempos.push_back(time);
+                ui->tiempo5->setText(QString::number(time)+ " microsegundos.");
+                media = this->calcularMedia();
+                ui->media->setText(QString::number(media)+ " microsegundos.");
+                break;
+        }
+
+        this->vecesEjecutado++;
+
+        this->escribeNums(this->pathSalida.toStdString());
+    }
+}
+
+double quicksort::calcularMedia()
+{
+
+    double suma = 0;
+    int i;
+    for(i = 0; i < (int) this->tiempos.size(); i++){
+        suma += this->tiempos[i];
+    }
+
+    return suma/i+1;
 }
 

@@ -1,6 +1,8 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
+#include <QFileDialog>
+#include <QErrorMessage>
 #include <QDialog>
 #include <stdlib.h>
 #include <string>
@@ -23,15 +25,27 @@ public:
     explicit quicksort(QWidget *parent = 0);
     ~quicksort();
 
-    void ordenarNumeros(string pathEntrada, string pathSalida);
+
+private slots:
+    void on_seleccionarArchivoPushButton_clicked();
+
+    void on_seleccionarArchivoPushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::quicksort *ui;
     vector<int> lista;
+    vector<double> tiempos;
+    int vecesEjecutado;
+
+    QString pathEntrada;
+    QString pathSalida;
 
     void leeNums(string path);
     void quickSort(int izquierda, int derecha);
     void escribeNums(string path);
+    double calcularMedia();
 
 };
 
