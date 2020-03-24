@@ -29,7 +29,7 @@ background-color: rgb(157, 152, 141);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;Palatino Linotype&quot;;
-background-color: rgb(74, 74, 74);</string>
+background-color: rgb(226, 224, 217);</string>
     </property>
     <property name="text">
      <string>Cambio de imágenes a Sepia</string>
@@ -46,10 +46,11 @@ background-color: rgb(74, 74, 74);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;Palatino Linotype&quot;;
-background-color: rgb(74, 74, 74);</string>
+background-color: rgb(226, 224, 217);
+</string>
     </property>
     <property name="text">
-     <string>Ordenación por quicksort</string>
+     <string>Ordenación por Quicksort</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

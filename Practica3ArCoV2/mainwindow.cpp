@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
     ui(new Ui::MainWindow){
     ui->setupUi(this);
+
+    this->setFixedSize(QSize(750,400));
 }
 
 MainWindow::~MainWindow(){
@@ -15,14 +17,14 @@ MainWindow::~MainWindow(){
 
 
 
-void MainWindow::on_Algoritmo1_clicked()
+void MainWindow::on_Algoritmo1_2_clicked()
 {
     quicksort *miejc = new quicksort();
      miejc->show();
 
 }
 
-void MainWindow::on_Algoritmo2_clicked()
+void MainWindow::on_Algoritmo1_clicked()
 {
     sepia *foto = new sepia();
     foto->show();

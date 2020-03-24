@@ -19,9 +19,9 @@ public:
 
 
 private slots:
-    void on_Algoritmo1_clicked();
+    void on_Algoritmo1_2_clicked();
 
-    void on_Algoritmo2_clicked();
+    void on_Algoritmo1_clicked();
 
 
 

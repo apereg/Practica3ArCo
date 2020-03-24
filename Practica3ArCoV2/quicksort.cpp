@@ -6,6 +6,8 @@ quicksort::quicksort(QWidget *parent) :
     ui(new Ui::quicksort)
 {
     ui->setupUi(this);
+
+     this->setFixedSize(QSize(537,597));
 }
 
 quicksort::~quicksort()

@@ -11,6 +11,8 @@ sepia::sepia(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::sepia){
     ui->setupUi(this);
+
+     this->setFixedSize(QSize(1340,603));
 }
 
 sepia::~sepia(){
