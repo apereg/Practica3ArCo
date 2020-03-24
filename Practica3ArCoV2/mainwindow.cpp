@@ -17,7 +17,7 @@ MainWindow::~MainWindow(){
 
 void MainWindow::on_Algoritmo1_clicked()
 {
-    Quicksort *miejc = new Quicksort();
+    quicksort *miejc = new quicksort();
      miejc->show();
 
 }

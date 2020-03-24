@@ -4,7 +4,7 @@
 #include <QDialog>
 
 namespace Ui {
-class quicksort;
+    class quicksort;
 }
 
 class quicksort : public QDialog
