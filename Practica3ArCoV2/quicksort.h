@@ -1,34 +1,22 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
-#include <QWidget>
-
-using namespace std;
-
+#include <QDialog>
 
 namespace Ui {
-class Quicksort;
+class quicksort;
 }
 
-
-
-
-class Quicksort
+class quicksort : public QDialog
 {
-
     Q_OBJECT
 
-    public:
-        explicit Quicksort(QWidget *parent = 0);
-        ~Quicksort();
+public:
+    explicit quicksort(QWidget *parent = 0);
+    ~quicksort();
 
-    private slots:
-
-
-
-    private:
-        Ui::Quicksort *ui;
-
+private:
+    Ui::quicksort *ui;
 };
 
 #endif // QUICKSORT_H

@@ -1,30 +1,18 @@
 #include "sepia.h"
 #include "ui_sepia.h"
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QImage>
+#include <QString>
+#include <QGraphicsScene>
+#include <ctime>
 
-Sepia::Sepia(QWidget *parent) :
+sepia::sepia(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Sepia){
+    ui(new Ui::sepia){
     ui->setupUi(this);
 }
 
-Sepia::~Sepia(){
+sepia::~sepia(){
     delete ui;
 }
-
-
-/*
-AlgoritmoFoto::AlgoritmoFoto(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::AlgoritmoFoto)
-{
-    ui->setupUi(this);
-}
-
-AlgoritmoFoto::~AlgoritmoFoto()
-{
-    delete ui;
-
-}
-*/

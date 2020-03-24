@@ -1,12 +1,23 @@
 #ifndef SEPIA_H
 #define SEPIA_H
 
-#include <QWidget>
+#include <QDialog>
 
-class sepia
+namespace Ui {
+class sepia;
+}
+
+class sepia : public QDialog
 {
+    Q_OBJECT
+
 public:
-    sepia();
+    explicit sepia(QWidget *parent = 0);
+    ~sepia();
+
+
+private:
+    Ui::sepia *ui;
 };
 
 #endif // SEPIA_H

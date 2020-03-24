@@ -1,22 +1,14 @@
 #include "quicksort.h"
 #include "ui_quicksort.h"
 
-Quicksort::Quicksort(QWidget *parent) :
+quicksort::quicksort(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Quicksort)
+    ui(new Ui::quicksort)
 {
     ui->setupUi(this);
-
 }
 
-Quicksort::~Quicksort()
+quicksort::~quicksort()
 {
     delete ui;
 }
-
-
-
-
-
-
-

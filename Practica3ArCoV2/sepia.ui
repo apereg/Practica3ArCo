@@ -17,7 +17,7 @@
    <string notr="true">background-color: rgb(214, 174, 108);
 background-color: rgb(157, 152, 141);</string>
   </property>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="tiempo3Label">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -50,11 +50,11 @@ color: rgb(6, 6, 6);</string>
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="tiempo5Label">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -71,7 +71,7 @@ color: rgb(6, 6, 6);</string>
     <string>Tiempo 5</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="tiempo2LineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -100,7 +100,7 @@ gridline-color: rgb(66, 66, 66);
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="tiempo4Label">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -117,7 +117,7 @@ color: rgb(6, 6, 6);</string>
     <string>Tiempo 4</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="mediaLineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -133,7 +133,7 @@ gridline-color: rgb(66, 66, 66);
 </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="tiempo5LineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -149,7 +149,7 @@ gridline-color: rgb(66, 66, 66);
 </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="tiempo3LineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -165,7 +165,7 @@ gridline-color: rgb(66, 66, 66);
 </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="mediaLabel">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -181,7 +181,7 @@ gridline-color: rgb(66, 66, 66);
     <string>Media:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="tiempo1Label">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -198,7 +198,7 @@ color: rgb(6, 6, 6);</string>
     <string>Tiempo 1</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="tituloLabel">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -215,7 +215,7 @@ font: 75 italic 18pt &quot;Palatino Linotype&quot;;</string>
     <string>  Cambio de imágenes a sepia  </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="tiempo1LineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -231,7 +231,7 @@ gridline-color: rgb(66, 66, 66);
 </string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="tiempo4LineEdit">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -247,7 +247,7 @@ gridline-color: rgb(66, 66, 66);
 </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="tiempo2Label">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -264,7 +264,7 @@ color: rgb(6, 6, 6);</string>
     <string>Tiempo 2</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="ejecutarPushButton">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -366,7 +366,7 @@ color: rgb(6, 6, 6);</string>
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="imagenBonitaLabel">
    <property name="geometry">
     <rect>
      <x>600</x>
@@ -383,7 +383,7 @@ border-color: rgb(248, 248, 248);</string>
     <string>Imagen Bonita</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="imagenAburridaLabel">
    <property name="geometry">
     <rect>
      <x>1040</x>
@@ -399,7 +399,7 @@ border-color: rgb(248, 248, 248);</string>
     <string>Imagen Aburrida</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="seleccionarFotoPushButton">
    <property name="geometry">
     <rect>
      <x>500</x>
