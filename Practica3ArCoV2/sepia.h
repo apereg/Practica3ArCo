@@ -2,6 +2,7 @@
 #define SEPIA_H
 
 #include <QDialog>
+#include <stdlib.h>
 
 namespace Ui {
 class sepia;

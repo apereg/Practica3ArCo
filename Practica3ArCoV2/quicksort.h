@@ -2,6 +2,8 @@
 #define QUICKSORT_H
 
 #include <QDialog>
+#include <stdlib.h>
+#include <iostream>
 
 namespace Ui {
     class quicksort;
