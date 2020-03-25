@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Algoritmo 2</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(214, 174, 108);
@@ -50,8 +50,8 @@ color: rgb(6, 6, 6);</string>
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="tiempo5Label">
@@ -85,6 +85,9 @@ color: rgb(6, 6, 6);</string>
 border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="Line" name="line">
@@ -132,6 +135,9 @@ border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="tiempo5LineEdit">
    <property name="geometry">
@@ -148,6 +154,9 @@ border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="tiempo3LineEdit">
    <property name="geometry">
@@ -163,6 +172,9 @@ gridline-color: rgb(66, 66, 66);
 border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="mediaLabel">
@@ -230,6 +242,9 @@ border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="tiempo4LineEdit">
    <property name="geometry">
@@ -245,6 +260,9 @@ gridline-color: rgb(66, 66, 66);
 border-color: rgb(80, 80, 80);
 gridline-color: rgb(66, 66, 66);
 </string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="tiempo2Label">
@@ -318,7 +336,7 @@ color: rgb(6, 6, 6);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2ss">
+  <widget class="QLabel" name="imagenBonitaFoto">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -334,7 +352,7 @@ color: rgb(6, 6, 6);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2ss_2">
+  <widget class="QLabel" name="ImagenAburridaFoto">
    <property name="geometry">
     <rect>
      <x>950</x>

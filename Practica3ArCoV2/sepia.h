@@ -3,6 +3,15 @@
 
 #include <QDialog>
 #include <stdlib.h>
+#include <vector>
+#include <iostream>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QImage>
+#include <QString>
+#include <QGraphicsScene>
+#include <QErrorMessage>
+#include <ctime>
 
 namespace Ui {
 class sepia;
@@ -17,8 +26,18 @@ public:
     ~sepia();
 
 
+private slots:
+    void on_seleccionarFotoPushButton_clicked();
+
+    void on_ejecutarPushButton_clicked();
+
 private:
     Ui::sepia *ui;
+    QString fileName;
+    QString pathEntrada;
+    int vecesEjecutado;
+    //vector<int> lista;
+    //vector<double> tiempos;
 };
 
 #endif // SEPIA_H
