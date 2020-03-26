@@ -67,6 +67,7 @@ void quicksort::escribeNums(string path)
         ficheroSalida << this->lista[i];
         ficheroSalida << " ";
     }
+    ficheroSalida.close();
 }
 
 
@@ -82,7 +83,7 @@ void quicksort::on_seleccionarArchivoPushButton_2_clicked()
 {
 
     this->pathSalida = QFileDialog::getOpenFileName(this,
-    tr("Open File"), "/home", tr("Text Files (*.txt)"));
+    tr("Open File"), QDir::currentPath(), tr("Text Files (*.txt)"));
 
 }
 

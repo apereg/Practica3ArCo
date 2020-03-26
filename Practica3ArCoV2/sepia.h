@@ -29,16 +29,22 @@ public:
 
 
 private slots:
-    void on_seleccionarFotoPushButton_clicked();
+    void on_seleccionarOrigen_clicked();
 
     void on_ejecutarPushButton_clicked();
+
+    void on_seleccionarDestino_clicked();
 
 private:
     Ui::sepia *ui;
     QString fileName;
     QString pathEntrada;
+    QString pathSalida;
     int vecesEjecutado;
     vector<QString> imagenes;
+    vector<int> tiempos;
+
+    double calcularMedia();
 };
 
 #endif // SEPIA_H
