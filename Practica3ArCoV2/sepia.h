@@ -36,6 +36,7 @@ private:
     QString fileName;
     QString pathEntrada;
     int vecesEjecutado;
+    QStringList *imagenes = new QStringList();
     //vector<int> lista;
     //vector<double> tiempos;
 };
