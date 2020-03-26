@@ -12,7 +12,8 @@
 #include <QGraphicsScene>
 #include <QErrorMessage>
 #include <ctime>
-#include <iostream>
+
+using namespace std;
 
 namespace Ui {
 class sepia;
@@ -37,9 +38,7 @@ private:
     QString fileName;
     QString pathEntrada;
     int vecesEjecutado;
-    QStringList *imagenes = new QStringList();
-    //vector<int> lista;
-    //vector<double> tiempos;
+    vector<QString> imagenes;
 };
 
 #endif // SEPIA_H

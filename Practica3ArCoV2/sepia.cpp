@@ -1,8 +1,6 @@
 #include "sepia.h"
 #include "ui_sepia.h"
 
-using namespace std;
-
 sepia::sepia(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::sepia){
@@ -17,7 +15,7 @@ sepia::~sepia(){
 
 /* Metodo para seleccionar la imagen a usar */
 void sepia::on_seleccionarFotoPushButton_clicked(){
-    int i;
+    int i, numImagenes = 0;
     QFileDialog dialog(this);
 
     dialog.setFileMode(QFileDialog::Directory);
@@ -27,9 +25,10 @@ void sepia::on_seleccionarFotoPushButton_clicked(){
     for (i = 0; i < listaArchivos.size(); i++)
         if(listaArchivos[i].endsWith(".png") || listaArchivos[i].endsWith(".jpg")){
             cout<<"Se añade "<<listaArchivos[i].toStdString()<<endl; //DEBUG
-            this->imagenes->push_front(listaArchivos[i]);
+            this->imagenes[numImagenes] = listaArchivos[i];
+            numImagenes++;
         }
-    cout<<"El directorio tenia "<<listaArchivos.size()<<" de los cuales "<<this->imagenes->size()<< " son imagenes validas"<<endl; //DEBUG
+    cout<<"El directorio tenia "<<listaArchivos.size()<<" de los cuales "<<this->imagenes.size()<< " son imagenes validas"<<endl; //DEBUG
 
     /*
     this->pathEntrada = QFileDialog::getOpenFileName(this, QObject::tr("Open File"), "./", QObject::tr("Images (*.png *.xpm *.jpg)"));
@@ -56,8 +55,15 @@ void sepia::on_ejecutarPushButton_clicked(){
         error.showMessage("No se encuentra ninguna imagen valida en el directorio.");
         error.exec();
     }else{
+        unsigned t0=0, t1=0;
+        t0=clock();
         //TODO ejecutar el algoritmo
-
+        int i;
+        QImage imagen;
+        for (i=0; i<this->imagenes->size(); i++) {
+            imagen = QImage(this->imagenes[i]);
+        }
+        t1=clock();
         this->vecesEjecutado++;
     }
 }
