@@ -114,30 +114,30 @@ void sepia::on_ejecutarPushButton_clicked(){
         t1=clock();
         time = (double(t1-t0)/(CLOCKS_PER_SEC));
 
-        time *= 1000000;
+        time *= 1000;
 
         switch(this->vecesEjecutado){
             case 0:
                 this->tiempos.push_back(time);
-                ui->tiempo1->setText(QString::number(time) + " microsegundas.");
+                ui->tiempo1->setText(QString::number(time) + " microsegundos.");
                 break;
             case 1:
                 this->tiempos.push_back(time);
-                ui->tiempo2->setText(QString::number(time)+ " microsegundas.");
+                ui->tiempo2->setText(QString::number(time)+ " microsegundos.");
                 break;
             case 2:
                 this->tiempos.push_back(time);
-                ui->tiempo3->setText(QString::number(time)+ " microsegundas.");
+                ui->tiempo3->setText(QString::number(time)+ " microsegundos.");
                 break;
             case 3:
                 this->tiempos.push_back(time);
-                ui->tiempo4->setText(QString::number(time)+ " microsegundas.");
+                ui->tiempo4->setText(QString::number(time)+ " microsegundos.");
                 break;
             case 4:
                 this->tiempos.push_back(time);
-                ui->tiempo5->setText(QString::number(time)+ " microsegundas.");
+                ui->tiempo5->setText(QString::number(time)+ " microsegundos.");
                 media = this->calcularMedia();
-                ui->media->setText(QString::number(media)+ " microsegundas.");
+                ui->media->setText(QString::number(media)+ " microsegundos.");
                 break;
         }
 
