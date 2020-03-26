@@ -12,6 +12,7 @@
 #include <QGraphicsScene>
 #include <QErrorMessage>
 #include <ctime>
+#include <iostream>
 
 namespace Ui {
 class sepia;

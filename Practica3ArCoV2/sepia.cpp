@@ -1,6 +1,8 @@
 #include "sepia.h"
 #include "ui_sepia.h"
 
+using namespace std;
+
 sepia::sepia(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::sepia){
@@ -23,8 +25,11 @@ void sepia::on_seleccionarFotoPushButton_clicked(){
     this->pathEntrada = QFileDialog::getExistingDirectory(0, ("Selecciona la carpeta"), QDir::currentPath());
     QStringList listaArchivos = QDir(this->pathEntrada).entryList();
     for (i = 0; i < listaArchivos.size(); i++)
-        if(listaArchivos[i].endsWith(".png") || listaArchivos[i].endsWith(".jpg"))
+        if(listaArchivos[i].endsWith(".png") || listaArchivos[i].endsWith(".jpg")){
+            cout<<"Se añade "<<listaArchivos[i].toStdString()<<endl; //DEBUG
             this->imagenes->push_front(listaArchivos[i]);
+        }
+    cout<<"El directorio tenia "<<listaArchivos.size()<<" de los cuales "<<this->imagenes->size()<< " son imagenes validas"<<endl; //DEBUG
 
     /*
     this->pathEntrada = QFileDialog::getOpenFileName(this, QObject::tr("Open File"), "./", QObject::tr("Images (*.png *.xpm *.jpg)"));
