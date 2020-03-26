@@ -51,18 +51,18 @@ void sepia::on_ejecutarPushButton_clicked(){
     }else if(this->pathEntrada.trimmed().isEmpty()){
         error.showMessage("Por favor, especifique el directorio de entrada.");
         error.exec();
-    }else if(this->imagenes->isEmpty()){
+   /* }else if(this->imagenes->isEmpty()){
         error.showMessage("No se encuentra ninguna imagen valida en el directorio.");
-        error.exec();
+        error.exec();*/
     }else{
         unsigned t0=0, t1=0;
         t0=clock();
         //TODO ejecutar el algoritmo
         int i;
         QImage imagen;
-        for (i=0; i<this->imagenes->size(); i++) {
+        /*for (i=0; i<this->imagenes->size(); i++) {
             imagen = QImage(this->imagenes[i]);
-        }
+        }^*/
         t1=clock();
         this->vecesEjecutado++;
     }
