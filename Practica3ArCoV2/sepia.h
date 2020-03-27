@@ -16,36 +16,33 @@
 using namespace std;
 
 namespace Ui {
-class sepia;
+    class sepia;
 }
 
-class sepia : public QDialog
-{
+class sepia : public QDialog{
     Q_OBJECT
 
-public:
-    explicit sepia(QWidget *parent = 0);
-    ~sepia();
+    public:
+        explicit sepia(QWidget *parent = 0);
+        ~sepia();
 
 
-private slots:
-    void on_seleccionarOrigen_clicked();
+    private slots:
+        void on_seleccionarOrigen_clicked();
+        void on_ejecutarPushButton_clicked();
+        void on_seleccionarDestino_clicked();
 
-    void on_ejecutarPushButton_clicked();
+    private:
+        Ui::sepia *ui;
+        QString fileName;
+        QString pathEntrada;
+        QString pathSalida;
+        int vecesEjecutado;
+        vector<QString> imagenes;
+        vector<QString> nombreImagenes;
+        vector<int> tiempos;
+        double calcularMedia();
 
-    void on_seleccionarDestino_clicked();
-
-private:
-    Ui::sepia *ui;
-    QString fileName;
-    QString pathEntrada;
-    QString pathSalida;
-    int vecesEjecutado;
-    vector<QString> imagenes;
-    vector<QString> nombreImagenes;
-    vector<int> tiempos;
-
-    double calcularMedia();
 };
 
 #endif // SEPIA_H

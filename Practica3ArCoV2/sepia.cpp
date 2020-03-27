@@ -3,36 +3,30 @@
 
 sepia::sepia(QWidget* parent)
     : QDialog(parent)
-    , ui(new Ui::sepia)
-{
+    , ui(new Ui::sepia){
     ui->setupUi(this);
     this->vecesEjecutado = 0;
     this->setFixedSize(QSize(1340, 603));
 }
 
-sepia::~sepia()
-{
+sepia::~sepia(){
     delete ui;
 }
 
 /* Metodo para seleccionar la imagen a usar */
-void sepia::on_seleccionarOrigen_clicked()
-{
+void sepia::on_seleccionarOrigen_clicked(){
     int i, numImagenes = 0;
     QFileDialog dialog(this);
-
     dialog.setFileMode(QFileDialog::Directory);
-
     this->pathEntrada = QFileDialog::getExistingDirectory(0, ("Selecciona la carpeta"), QDir::currentPath());
     QStringList listaArchivos = QDir(this->pathEntrada).entryList();
     for (i = 0; i < listaArchivos.size(); i++) {
         if (listaArchivos[i].endsWith(".png") || listaArchivos[i].endsWith(".jpg") || listaArchivos[i].endsWith(".jpeg")) {
             this->imagenes.push_back(this->pathEntrada + "/" + listaArchivos[i]);
-            if(listaArchivos[i].endsWith(".jpeg")){
+            if(listaArchivos[i].endsWith(".jpeg"))
                 this->nombreImagenes.push_back(listaArchivos[i].left(listaArchivos[i].size() - 5));
-            } else {
+            else
                 this->nombreImagenes.push_back(listaArchivos[i].left(listaArchivos[i].size() - 4));
-            }
             numImagenes++;
         }
     }
@@ -41,7 +35,6 @@ void sepia::on_seleccionarOrigen_clicked()
 /* Metodo para ejecutar el algoritmo */
 void sepia::on_ejecutarPushButton_clicked(){
     QErrorMessage error;
-
     if (this->vecesEjecutado == 5) {
         error.showMessage("El algoritmo ya se ha ejecutado el numero maximo de veces.");
         error.exec();
@@ -76,24 +69,18 @@ void sepia::on_ejecutarPushButton_clicked(){
                         int tr = (int)(0.393 * r + 0.769 * g + 0.189 * b);
                         int tg = (int)(0.349 * r + 0.686 * g + 0.168 * b);
                         int tb = (int)(0.272 * r + 0.534 * g + 0.131 * b);
-                        if (tr > 255) {
+                        if (tr > 255)
                             r = 255;
-                        } else {
+                        else
                             r = tr;
-                        }
-
-                        if (tg > 255) {
+                        if (tg > 255)
                             g = 255;
-                        } else {
+                        else
                             g = tg;
-                        }
-
-                        if (tb > 255) {
+                        if (tb > 255)
                             b = 255;
-                        } else {
+                        else
                             b = tb;
-                        }
-
                         int sepia = (a << 24) | (r << 16) | (g << 8) | b;
                         image.setPixel(f1, f2, sepia);
                     }
@@ -112,49 +99,43 @@ void sepia::on_ejecutarPushButton_clicked(){
         time *= 1000;
 
         switch (this->vecesEjecutado) {
-        case 0:
-            this->tiempos.push_back(time);
-            ui->tiempo1->setText(QString::number(time) + " microsegundos.");
-            break;
-        case 1:
-            this->tiempos.push_back(time);
-            ui->tiempo2->setText(QString::number(time) + " microsegundos.");
-            break;
-        case 2:
-            this->tiempos.push_back(time);
-            ui->tiempo3->setText(QString::number(time) + " microsegundos.");
-            break;
-        case 3:
-            this->tiempos.push_back(time);
-            ui->tiempo4->setText(QString::number(time) + " microsegundos.");
-            break;
-        case 4:
-            this->tiempos.push_back(time);
-            ui->tiempo5->setText(QString::number(time) + " microsegundos.");
-            media = this->calcularMedia();
-            ui->media->setText(QString::number(media) + " microsegundos.");
-            break;
+            case 0:
+                this->tiempos.push_back(time);
+                ui->tiempo1->setText(QString::number(time) + " microsegundos.");
+                break;
+            case 1:
+                this->tiempos.push_back(time);
+                ui->tiempo2->setText(QString::number(time) + " microsegundos.");
+                break;
+            case 2:
+                this->tiempos.push_back(time);
+                ui->tiempo3->setText(QString::number(time) + " microsegundos.");
+                break;
+            case 3:
+                this->tiempos.push_back(time);
+                ui->tiempo4->setText(QString::number(time) + " microsegundos.");
+                break;
+            case 4:
+                this->tiempos.push_back(time);
+                ui->tiempo5->setText(QString::number(time) + " microsegundos.");
+                media = this->calcularMedia();
+                ui->media->setText(QString::number(media) + " microsegundos.");
+                break;
         }
-
         this->vecesEjecutado++;
     }
 }
 
-void sepia::on_seleccionarDestino_clicked()
-{
+void sepia::on_seleccionarDestino_clicked(){
     QFileDialog dialog(this);
     dialog.setFileMode(QFileDialog::Directory);
     this->pathSalida = QFileDialog::getExistingDirectory(0, ("Selecciona la carpeta"), QDir::currentPath());
 }
 
-double sepia::calcularMedia()
-{
-
+double sepia::calcularMedia(){
     double suma = 0;
     int i;
-    for (i = 0; i < (int)this->tiempos.size(); i++) {
+    for (i = 0; i < (int)this->tiempos.size(); i++)
         suma += this->tiempos[i];
-    }
-
     return suma / i + 1;
 }
