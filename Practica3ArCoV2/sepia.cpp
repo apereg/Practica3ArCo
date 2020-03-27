@@ -33,11 +33,9 @@ void sepia::on_seleccionarOrigen_clicked()
             } else {
                 this->nombreImagenes.push_back(listaArchivos[i].left(listaArchivos[i].size() - 4));
             }
-            cout<<imagenes[numImagenes].toStdString()<<endl;
             numImagenes++;
         }
     }
-    cout<<"El directorio tenia "<<listaArchivos.size()<<" de los cuales "<<this->imagenes.size()<< " son imagenes validas"<<endl;
 }
 
 /* Metodo para ejecutar el algoritmo */
@@ -63,11 +61,8 @@ void sepia::on_ejecutarPushButton_clicked(){
         double media, time;
         QImage image;
         for (i = 0; i < (int)this->imagenes.size(); i++) {
-            cout<<this->imagenes[i].toStdString()<<endl; // DEBUG
-            cout<<this->nombreImagenes[i].toStdString()<<endl; //DEBUG
             image = QImage(this->imagenes[i]);
             if(!image.isNull()){
-                cout<<"La imagen no es nula"<<endl;
                 QSize sizeImage = image.size();
                 int width = sizeImage.width(), height = sizeImage.height();
                 QRgb color;
@@ -103,18 +98,11 @@ void sepia::on_ejecutarPushButton_clicked(){
                         image.setPixel(f1, f2, sepia);
                     }
                 }
-                cout<<"Acaban los for"<<endl;
-                cout<<"LE TOCA"<<endl;
-                cout<<this->pathSalida.toStdString()<<endl;
-                cout<<this->nombreImagenes[i].toStdString()<<endl;
-                QString fileName;
                 if(this->imagenes[i].right(4) == "jpeg")
                     fileName = this->pathSalida + this->nombreImagenes[i] + "_Sepia" + this->imagenes[i].right(5);
                 else
                     fileName = this->pathSalida + "/" + this->nombreImagenes[i] + "_Sepia" + this->imagenes[i].right(4);
-                cout << "Se va a guardar en " << fileName.toStdString() << endl;
-                bool asd = image.save(fileName);
-                cout<<asd<<endl;
+                image.save(fileName);
             }
         }
 
