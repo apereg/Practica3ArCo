@@ -42,6 +42,7 @@ private:
     QString pathSalida;
     int vecesEjecutado;
     vector<QString> imagenes;
+    vector<QString> nombreImagenes;
     vector<int> tiempos;
 
     double calcularMedia();
