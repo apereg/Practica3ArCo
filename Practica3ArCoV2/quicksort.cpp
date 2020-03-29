@@ -114,7 +114,7 @@ void quicksort::on_pushButton_clicked()
 
         time = (double(t1-t0)/(CLOCKS_PER_SEC));
 
-        time *= 1000;
+        time *= 1000000;
 
         switch(this->vecesEjecutado){
             case 0:
@@ -159,3 +159,22 @@ double quicksort::calcularMedia()
     return suma/i+1;
 }
 
+
+void quicksort::on_resetear_clicked()
+{
+
+    this->vecesEjecutado = 0;
+
+    ui->tiempo1->setText("");
+    ui->tiempo2->setText("");
+    ui->tiempo3->setText("");
+    ui->tiempo4->setText("");
+    ui->tiempo5->setText("");
+    ui->media->setText("");
+
+    this->pathEntrada = "";
+    this->pathSalida = "";
+
+    this->tiempos.clear();
+
+}

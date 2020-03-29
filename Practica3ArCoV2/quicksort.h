@@ -33,6 +33,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_resetear_clicked();
+
 private:
     Ui::quicksort *ui;
     vector<int> lista;

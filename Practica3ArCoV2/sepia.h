@@ -32,7 +32,9 @@ class sepia : public QDialog{
         void on_ejecutarPushButton_clicked();
         void on_seleccionarDestino_clicked();
 
-    private:
+        void on_seleccionarDestino_2_clicked();
+
+private:
         Ui::sepia *ui;
         QString fileName;
         QString pathEntrada;

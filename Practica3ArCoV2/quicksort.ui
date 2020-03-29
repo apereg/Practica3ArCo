@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Quicksort</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(214, 174, 108);
@@ -366,6 +366,22 @@ gridline-color: rgb(66, 66, 66);
    </property>
    <property name="text">
     <string>Seleccionar salida</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetear">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>480</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;Palatino Linotype&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Resetear tiempos</string>
    </property>
   </widget>
  </widget>

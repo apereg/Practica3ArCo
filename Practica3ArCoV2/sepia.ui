@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1340</width>
-    <height>603</height>
+    <width>771</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Algoritmo 2</string>
+   <string>Sepia</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(214, 174, 108);
@@ -336,38 +336,6 @@ color: rgb(6, 6, 6);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="imagenBonitaFoto">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>220</y>
-     <width>331</width>
-     <height>281</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="ImagenAburridaFoto">
-   <property name="geometry">
-    <rect>
-     <x>950</x>
-     <y>220</y>
-     <width>331</width>
-     <height>281</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
@@ -384,46 +352,13 @@ color: rgb(6, 6, 6);</string>
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="imagenBonitaLabel">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>520</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 75 italic 12pt &quot;Palatino Linotype&quot;;
-border-color: rgb(248, 248, 248);</string>
-   </property>
-   <property name="text">
-    <string>Imagen Bonita</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="imagenAburridaLabel">
-   <property name="geometry">
-    <rect>
-     <x>1040</x>
-     <y>520</y>
-     <width>171</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 75 italic 12pt &quot;Palatino Linotype&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Imagen Aburrida</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="seleccionarOrigen">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>140</y>
+     <x>430</x>
+     <y>170</y>
      <width>281</width>
-     <height>41</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -436,10 +371,10 @@ border-color: rgb(248, 248, 248);</string>
   <widget class="QPushButton" name="seleccionarDestino">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>140</y>
+     <x>430</x>
+     <y>300</y>
      <width>281</width>
-     <height>41</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -447,6 +382,22 @@ border-color: rgb(248, 248, 248);</string>
    </property>
    <property name="text">
     <string>Seleccionar directorio destino</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="seleccionarDestino_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>480</y>
+     <width>281</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;Palatino Linotype&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Resetear tiempos</string>
    </property>
   </widget>
  </widget>

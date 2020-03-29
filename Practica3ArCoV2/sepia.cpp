@@ -6,7 +6,7 @@ sepia::sepia(QWidget* parent)
     , ui(new Ui::sepia){
     ui->setupUi(this);
     this->vecesEjecutado = 0;
-    this->setFixedSize(QSize(1340, 603));
+    this->setFixedSize(QSize(771, 623));
 }
 
 sepia::~sepia(){
@@ -69,6 +69,7 @@ void sepia::on_ejecutarPushButton_clicked(){
                         int tr = (int)(0.393 * r + 0.769 * g + 0.189 * b);
                         int tg = (int)(0.349 * r + 0.686 * g + 0.168 * b);
                         int tb = (int)(0.272 * r + 0.534 * g + 0.131 * b);
+
                         if (tr > 255)
                             r = 255;
                         else
@@ -81,14 +82,17 @@ void sepia::on_ejecutarPushButton_clicked(){
                             b = 255;
                         else
                             b = tb;
+
                         int sepia = (a << 24) | (r << 16) | (g << 8) | b;
                         image.setPixel(f1, f2, sepia);
                     }
                 }
-                if(this->imagenes[i].right(4) == "jpeg")
-                    fileName = this->pathSalida + this->nombreImagenes[i] + "_Sepia" + this->imagenes[i].right(5);
-                else
+                if(this->imagenes[i].right(4) == "jpeg"){
+                    fileName = this->pathSalida + "/" + this->nombreImagenes[i] + "_Sepia" + this->imagenes[i].right(5);
+                }else{
                     fileName = this->pathSalida + "/" + this->nombreImagenes[i] + "_Sepia" + this->imagenes[i].right(4);
+                }
+
                 image.save(fileName);
             }
         }
@@ -96,7 +100,7 @@ void sepia::on_ejecutarPushButton_clicked(){
         t1 = clock();
         time = (double(t1 - t0) / (CLOCKS_PER_SEC));
 
-        time *= 1000;
+        time *= 1000000;
 
         switch (this->vecesEjecutado) {
             case 0:
@@ -132,10 +136,30 @@ void sepia::on_seleccionarDestino_clicked(){
     this->pathSalida = QFileDialog::getExistingDirectory(0, ("Selecciona la carpeta"), QDir::currentPath());
 }
 
-double sepia::calcularMedia(){
+double sepia::calcularMedia()
+{
+
     double suma = 0;
     int i;
     for (i = 0; i < (int)this->tiempos.size(); i++)
         suma += this->tiempos[i];
     return suma / i + 1;
+}
+
+void sepia::on_seleccionarDestino_2_clicked()
+{
+    this->vecesEjecutado = 0;
+
+    ui->tiempo1->setText("");
+    ui->tiempo2->setText("");
+    ui->tiempo3->setText("");
+    ui->tiempo4->setText("");
+    ui->tiempo5->setText("");
+    ui->media->setText("");
+
+    this->pathEntrada = "";
+    this->pathSalida = "";
+
+    this->tiempos.clear();
+
 }
