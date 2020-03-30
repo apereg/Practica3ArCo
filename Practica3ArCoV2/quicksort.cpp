@@ -57,7 +57,12 @@ void quicksort::quickSort(int izquierda, int derecha){
 
 
 void quicksort::escribeNums(string path){
-    ofstream ficheroSalida(path);
+
+    ofstream ficheroSalida;
+
+    ficheroSalida.open(path);
+
+    //ficheroSalida << setiosflags(ios::trunc);
 
     for(int i = 0; i < (int) this->lista.size(); i++){
         ficheroSalida << this->lista[i];
@@ -96,6 +101,8 @@ void quicksort::on_pushButton_clicked(){
         error.showMessage("Por favor, especifique el archivo de salida.");
         error.exec();
     }else{
+
+        this->lista.clear();
 
         this->leeNums(this->pathEntrada.toStdString());
 

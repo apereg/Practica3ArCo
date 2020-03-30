@@ -16,6 +16,10 @@ sepia::~sepia(){
 /* Metodo para seleccionar la imagen a usar */
 void sepia::on_seleccionarOrigen_clicked(){
     int i, numImagenes = 0;
+
+    this->imagenes.clear();
+    this->nombreImagenes.clear();
+
     QFileDialog dialog(this);
     dialog.setFileMode(QFileDialog::Directory);
     this->pathEntrada = QFileDialog::getExistingDirectory(0, ("Selecciona la carpeta"), QDir::currentPath());
@@ -48,6 +52,9 @@ void sepia::on_ejecutarPushButton_clicked(){
         error.showMessage("No se encuentra ninguna imagen valida en el directorio.");
         error.exec();
     } else {
+
+
+
         unsigned t0 = 0, t1 = 0;
         t0 = clock();
         int i;
