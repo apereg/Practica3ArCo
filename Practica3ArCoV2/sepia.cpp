@@ -100,30 +100,30 @@ void sepia::on_ejecutarPushButton_clicked(){
         t1 = clock();
         time = (double(t1 - t0) / (CLOCKS_PER_SEC));
 
-        time *= 1000000;
+        time *= 1000;
 
         switch (this->vecesEjecutado) {
             case 0:
                 this->tiempos.push_back(time);
-                ui->tiempo1->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo1->setText(QString::number(time) + " milisegundos.");
                 break;
             case 1:
                 this->tiempos.push_back(time);
-                ui->tiempo2->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo2->setText(QString::number(time) + " milisegundos.");
                 break;
             case 2:
                 this->tiempos.push_back(time);
-                ui->tiempo3->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo3->setText(QString::number(time) + " milisegundos.");
                 break;
             case 3:
                 this->tiempos.push_back(time);
-                ui->tiempo4->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo4->setText(QString::number(time) + " milisegundos.");
                 break;
             case 4:
                 this->tiempos.push_back(time);
-                ui->tiempo5->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo5->setText(QString::number(time) + " milisegundos.");
                 media = this->calcularMedia();
-                ui->media->setText(QString::number(media) + " microsegundos.");
+                ui->media->setText(QString::number(media) + " milisegundos.");
                 break;
         }
         this->vecesEjecutado++;

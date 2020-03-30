@@ -10,15 +10,13 @@ quicksort::quicksort(QWidget *parent) :
     this->setFixedSize(QSize(537,597));
 }
 
-quicksort::~quicksort()
-{
+quicksort::~quicksort(){
     delete ui;
 }
 
 
 
-void quicksort::leeNums(string path)
-{
+void quicksort::leeNums(string path){
     ifstream ficheroEntrada (path); //Apertura del archivo en modo lectura
     int numero = 0;
     if(ficheroEntrada.is_open()){
@@ -30,8 +28,7 @@ void quicksort::leeNums(string path)
 }
 
 
-void quicksort::quickSort(int izquierda, int derecha)
-{
+void quicksort::quickSort(int izquierda, int derecha){
     int pivote;
     int valorPivote;
     int aux;
@@ -59,8 +56,7 @@ void quicksort::quickSort(int izquierda, int derecha)
 }
 
 
-void quicksort::escribeNums(string path)
-{
+void quicksort::escribeNums(string path){
     ofstream ficheroSalida(path);
 
     for(int i = 0; i < (int) this->lista.size(); i++){
@@ -71,24 +67,21 @@ void quicksort::escribeNums(string path)
 }
 
 
-void quicksort::on_seleccionarArchivoPushButton_clicked()
-{
+void quicksort::on_seleccionarArchivoPushButton_clicked(){
 
     this->pathEntrada = QFileDialog::getOpenFileName(this,
     tr("Open File"), "/home", tr("Text Files (*.txt)"));
 
 }
 
-void quicksort::on_seleccionarArchivoPushButton_2_clicked()
-{
+void quicksort::on_seleccionarArchivoPushButton_2_clicked(){
 
     this->pathSalida = QFileDialog::getOpenFileName(this,
     tr("Open File"), QDir::currentPath(), tr("Text Files (*.txt)"));
 
 }
 
-void quicksort::on_pushButton_clicked()
-{
+void quicksort::on_pushButton_clicked(){
     QErrorMessage error;
     unsigned t0,t1;
     double time, media;
@@ -114,30 +107,30 @@ void quicksort::on_pushButton_clicked()
 
         time = (double(t1-t0)/(CLOCKS_PER_SEC));
 
-        time *= 1000000;
+        time *= 1000;
 
         switch(this->vecesEjecutado){
             case 0:
                 this->tiempos.push_back(time);
-                ui->tiempo1->setText(QString::number(time) + " microsegundos.");
+                ui->tiempo1->setText(QString::number(time) + " milisegundos.");
                 break;
             case 1:
                 this->tiempos.push_back(time);
-                ui->tiempo2->setText(QString::number(time)+ " microsegundos.");
+                ui->tiempo2->setText(QString::number(time)+ " milisegundos.");
                 break;
             case 2:
                 this->tiempos.push_back(time);
-                ui->tiempo3->setText(QString::number(time)+ " microsegundos.");
+                ui->tiempo3->setText(QString::number(time)+ " milisegundos.");
                 break;
             case 3:
                 this->tiempos.push_back(time);
-                ui->tiempo4->setText(QString::number(time)+ " microsegundos.");
+                ui->tiempo4->setText(QString::number(time)+ " milisegundos.");
                 break;
             case 4:
                 this->tiempos.push_back(time);
-                ui->tiempo5->setText(QString::number(time)+ " microsegundos.");
+                ui->tiempo5->setText(QString::number(time)+ " milisegundos.");
                 media = this->calcularMedia();
-                ui->media->setText(QString::number(media)+ " microsegundos.");
+                ui->media->setText(QString::number(media)+ " milisegundos.");
                 break;
         }
 
@@ -147,21 +140,16 @@ void quicksort::on_pushButton_clicked()
     }
 }
 
-double quicksort::calcularMedia()
-{
-
+double quicksort::calcularMedia(){
     double suma = 0;
     int i;
-    for(i = 0; i < (int) this->tiempos.size(); i++){
+    for(i = 0; i < (int) this->tiempos.size(); i++)
         suma += this->tiempos[i];
-    }
-
     return suma/i+1;
 }
 
 
-void quicksort::on_resetear_clicked()
-{
+void quicksort::on_resetear_clicked(){
 
     this->vecesEjecutado = 0;
 

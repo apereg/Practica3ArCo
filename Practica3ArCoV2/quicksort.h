@@ -17,8 +17,7 @@ namespace Ui {
     class quicksort;
 }
 
-class quicksort : public QDialog
-{
+class quicksort : public QDialog{
     Q_OBJECT
 
 public:
