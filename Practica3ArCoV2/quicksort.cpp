@@ -152,7 +152,7 @@ double quicksort::calcularMedia(){
     int i;
     for(i = 0; i < (int) this->tiempos.size(); i++)
         suma += this->tiempos[i];
-    return suma/i+1;
+    return suma/this->tiempos.size();
 }
 
 
@@ -166,9 +166,6 @@ void quicksort::on_resetear_clicked(){
     ui->tiempo4->setText("");
     ui->tiempo5->setText("");
     ui->media->setText("");
-
-    this->pathEntrada = "";
-    this->pathSalida = "";
 
     this->tiempos.clear();
 

@@ -53,8 +53,6 @@ void sepia::on_ejecutarPushButton_clicked(){
         error.exec();
     } else {
 
-
-
         unsigned t0 = 0, t1 = 0;
         t0 = clock();
         int i;
@@ -150,7 +148,7 @@ double sepia::calcularMedia()
     int i;
     for (i = 0; i < (int)this->tiempos.size(); i++)
         suma += this->tiempos[i];
-    return suma / i + 1;
+    return suma/this->tiempos.size();
 }
 
 void sepia::on_seleccionarDestino_2_clicked()
@@ -163,9 +161,6 @@ void sepia::on_seleccionarDestino_2_clicked()
     ui->tiempo4->setText("");
     ui->tiempo5->setText("");
     ui->media->setText("");
-
-    this->pathEntrada = "";
-    this->pathSalida = "";
 
     this->tiempos.clear();
 
